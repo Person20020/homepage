@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}Person20020{% endblock %}</title>
+        <link rel="icon" href="{{ url_for('static', filename='logo.png') }}" type="image/png">
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <head>
+        {% include "header.html" %}
+
+        <main>
+            {% block content %}
+            <div class="center">
+                <img src="{{ url_for('static', filename='logo.png') }}">
+            </div>
+            <h1>If you are seeing this, something probably broke.</h1>
+            {% endblock %}
+        </main>
+
+        {% include "footer.html" %}
+    </head>
+</html>
